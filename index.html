@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbox & BoxCar - Cartão Digital</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #ffffff;
+      padding: 20px;
+    }
+    .logo {
+      max-width: 180px;
+      margin: 10px auto;
+    }
+    h1 {
+      margin: 5px 0;
+    }
+    .tagline {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px auto;
+      padding: 15px;
+      max-width: 300px;
+      background-color: #e0e0e0;
+      color: #333;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .buttons a:hover {
+      background-color: #cfcfcf;
+    }
+    .buttons a img {
+      width: 20px;
+      height: 20px;
+    }
+    .pix-container {
+      background: #fff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+    .pix-code {
+      background: #eee;
+      padding: 10px;
+      word-break: break-all;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-family: monospace;
+    }
+    .copy-btn {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: #3e8e41;
+    }
+    img.qr-code {
+      width: 180px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-carbox.jpeg" class="logo" alt="Logo Carbox">
+    <img src="logo-boxcar.jpeg" class="logo" alt="Logo BoxCar">
+    <h1>Carbox & BoxCar</h1>
+    <p class="tagline">Cuidando do seu, como se fosse nosso!</p>
+  </header>
+
+  <div class="buttons">
+    <a href="https://wa.me/5538984025349" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      Wpp Carbox Produtos
+    </a>
+    <a href="https://wa.me/5538999449136" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      Wpp BoxCar Garage
+    </a>
+    <a href="https://www.instagram.com/carbox_jba" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      Instagram Carbox
+    </a>
+    <a href="https://www.instagram.com/boxcar_garage" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      Instagram BoxCar
+    </a>
+    <a href="https://share.google/blztNz1TjJTGpXjMW" target="_blank">
+      📍 Localização
+    </a>
+  </div>
+
+  <div class="pix-container">
+    <h2>Pagamento via Pix</h2>
+    <img class="qr-code" src="https://pix.bcb.gov.br/api/v1/qrcode?payload=00020126360014br.gov.bcb.pix0114+55389840253495204000053039865802BR5923Anthonny%20Leonardo%20Silva6008Brasilia62230519daqr2039547760505046304979B" alt="QR Code Pix">
+    <p class="pix-code" id="pixCode">00020126360014br.gov.bcb.pix0114+55389840253495204000053039865802BR5923Anthonny Leonardo Silva6008Brasilia62230519daqr2039547760505046304979B</p>
+    <button class="copy-btn" onclick="copyPixCode()">📋 Copiar código Pix</button>
+  </div>
+
+  <script>
+    function copyPixCode() {
+      const code = document.getElementById('pixCode').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        alert('Código Pix copiado!');
+      });
+    }
+  </script>
+</body>
+</html>
